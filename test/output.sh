@@ -16,7 +16,10 @@ desc "DEPENDS"
 desc "CIRCULAR (OK)"
 ./bin/cli.js test/cjs/a.js -c
 
-desc "CIRCULAR (FOUND)"
+desc "CIRCULAR (FOUND, NO INDEX COUNTING)"
+./bin/cli.js test/cjs/circular/a.js -c --no-count
+
+desc "CIRCULAR (FOUND, WITH INDEX COUNT)"
 ./bin/cli.js test/cjs/circular/a.js -c
 
 desc "NPM"
